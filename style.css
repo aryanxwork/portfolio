@@ -1,0 +1,13 @@
+#profile-image {
+    height: 300px;
+    width: 400px;
+    border: radius 50%;
+    display: inline-block;
+}
+
+#outer {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    scale: 0.65;
+}
