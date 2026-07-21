@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<link rel="stylesheet" href="css/stylehome.css">
+
+<body>
+    <div class="details">
+
+        <div class="text">
+            <h3>Aryan Sharma</h3>
+            <h4>CSE Undergraduate - Junior Web Developer</h4>
+            <h4>Email : aryanhere10@gmail.com</h4>
+            <h4>Mobile : +918493818500</h4>
+        </div>
+
+        <img class="userimg" src="/images/WhatsApp Image 2025-07-18 at 15.33.43_23ed85e0.jpg" alt="Profile">
+
+    </div>
+
+
+    <div class="navcard">
+
+        <a href="/" class="active">Home</a>
+
+        <a href="/projects">Projects</a>
+
+        <a href="/posts">All Posts</a>
+
+        <a href="/timeline">Timeline</a>
+
+    </div>
+
+
+    <div class="updates">
+
+        <h2>LATEST UPDATES</h2>
+
+        <% for(let i=0; i < Math.min(5, posts.length); i++) { %>
+
+            <div class="post">
+
+                <div class="post-content">
+
+                    <h4>
+                        <%= posts[i].title %>
+                    </h4>
+
+                    <p class="date">
+                        <%= posts[i].date %>
+                    </p>
+
+                    <p class="post-desc">
+                        <%= posts[i].desc %>
+                    </p>
+
+                </div>
+
+                <a href="/post/<%= posts[i].id %>" class="read-btn">
+                    Read →
+                </a>
+
+            </div>
+
+            <% } %>
+
+    </div>
+    <script src="/js/home.js"></script>
+</body>
+
+</html>
